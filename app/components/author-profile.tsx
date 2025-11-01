@@ -30,12 +30,12 @@ export function AuthorProfile({
           {authorSlug ? (
             <Link href={`/blog/author/${authorSlug}`}>
               <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-300 transition-colors">
-                {name}
+                {name} Sir
               </h3>
             </Link>
           ) : (
             <h3 className="font-semibold text-lg text-neutral-900 dark:text-neutral-100">
-              {name}
+              {name} Sir
             </h3>
           )}
 
