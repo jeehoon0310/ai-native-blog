@@ -1,11 +1,24 @@
 import fs from 'fs'
 import path from 'path'
 
+export type AuthorInfo = {
+  name: string
+  avatar: string
+  bio: string
+  social?: {
+    twitter?: string
+    github?: string
+    linkedin?: string
+    website?: string
+  }
+}
+
 type Metadata = {
   title: string
   publishedAt: string
   summary: string
   image?: string
+  author?: AuthorInfo
 }
 
 function parseFrontmatter(fileContent: string) {
@@ -14,13 +27,13 @@ function parseFrontmatter(fileContent: string) {
   let frontMatterBlock = match![1]
   let content = fileContent.replace(frontmatterRegex, '').trim()
   let frontMatterLines = frontMatterBlock.trim().split('\n')
-  let metadata: Partial<Metadata> = {}
+  let metadata: Partial<Record<string, any>> = {}
 
   frontMatterLines.forEach((line) => {
     let [key, ...valueArr] = line.split(': ')
     let value = valueArr.join(': ').trim()
     value = value.replace(/^['"](.*)['"]$/, '$1') // Remove quotes
-    metadata[key.trim() as keyof Metadata] = value
+    metadata[key.trim()] = value
   })
 
   return { metadata: metadata as Metadata, content }
@@ -87,4 +100,15 @@ export function formatDate(date: string, includeRelative = false) {
   }
 
   return `${fullDate} (${formattedDate})`
+}
+
+export const DEFAULT_AUTHOR: AuthorInfo = {
+  name: 'My Portfolio',
+  avatar: '/images/authors/default-avatar.svg',
+  bio: '열정적인 개발자이자 기술 블로거입니다. 웹 개발과 AI에 관심이 많습니다.',
+  social: {
+    github: 'https://github.com/yourusername',
+    twitter: 'https://twitter.com/yourusername',
+    linkedin: 'https://linkedin.com/in/yourusername',
+  },
 }

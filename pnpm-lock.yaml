@@ -15,35 +15,35 @@ importers:
         specifier: 20.11.17
         version: 20.11.17
       '@types/react':
-        specifier: 18.2.55
-        version: 18.2.55
+        specifier: ^19.0.0
+        version: 19.2.2
       '@types/react-dom':
-        specifier: 18.2.19
-        version: 18.2.19
+        specifier: ^19.0.0
+        version: 19.2.2(@types/react@19.2.2)
       '@vercel/analytics':
         specifier: ^1.1.3
-        version: 1.5.0(next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+        version: 1.5.0(next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
       '@vercel/speed-insights':
         specifier: ^1.0.9
-        version: 1.2.0(next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)
+        version: 1.2.0(next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
       geist:
         specifier: 1.2.2
-        version: 1.2.2(next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
+        version: 1.2.2(next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
       next:
         specifier: canary
-        version: 16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       next-mdx-remote:
         specifier: ^4.4.1
-        version: 4.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+        version: 4.4.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       postcss:
         specifier: ^8.4.35
         version: 8.5.6
       react:
-        specifier: 18.2.0
-        version: 18.2.0
+        specifier: ^19.0.0
+        version: 19.2.0
       react-dom:
-        specifier: 18.2.0
-        version: 18.2.0(react@18.2.0)
+        specifier: ^19.0.0
+        version: 19.2.0(react@19.2.0)
       sugar-high:
         specifier: ^0.6.0
         version: 0.6.1
@@ -344,17 +344,13 @@ packages:
   '@types/node@20.11.17':
     resolution: {integrity: sha512-QmgQZGWu1Yw9TDyAP9ZzpFJKynYNeOvwMJmaxABfieQoVoiVOS6MN1WSpqpRcbeA5+RW82kraAVxCCJg+780Qw==}
 
-  '@types/prop-types@15.7.15':
-    resolution: {integrity: sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==}
+  '@types/react-dom@19.2.2':
+    resolution: {integrity: sha512-9KQPoO6mZCi7jcIStSnlOWn2nEF3mNmyr3rIAsGnAbQKYbRLyqmeSc39EVgtxXVia+LMT8j3knZLAZAh+xLmrw==}
+    peerDependencies:
+      '@types/react': ^19.2.0
 
-  '@types/react-dom@18.2.19':
-    resolution: {integrity: sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==}
-
-  '@types/react@18.2.55':
-    resolution: {integrity: sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==}
-
-  '@types/scheduler@0.26.0':
-    resolution: {integrity: sha512-WFHp9YUJQ6CKshqoC37iOlHnQSmxNc795UhB26CyBBttrN9svdIrUjl/NjnNmfcwtncN0h/0PPAFWv9ovP8mLA==}
+  '@types/react@19.2.2':
+    resolution: {integrity: sha512-6mDvHUFSjyT2B2yeNx2nUgMxh9LtOWvkhIU3uePn2I2oyNymUAX1NIsdgviM4CH+JSrp2D2hsMvJOkxY+0wNRA==}
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
@@ -548,9 +544,6 @@ packages:
   is-reference@3.0.3:
     resolution: {integrity: sha512-ixkJoqQvAP88E6wLydLGGqCJsrFUnqoH6HnaczB8XmDH1oaWU+xxdptvikTgaEhtZ53Ky6YXiBuUI2WXLMCwjw==}
 
-  js-tokens@4.0.0:
-    resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-
   js-yaml@4.1.0:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
@@ -631,10 +624,6 @@ packages:
 
   longest-streak@3.1.0:
     resolution: {integrity: sha512-9Ri+o0JYgehTaVBBDoMqIl8GXtbWg711O3srftcHhZ0dqnETqLaoIK0x17fUw9rFSlK/0NlsKe0Ahhyl5pXE2g==}
-
-  loose-envify@1.4.0:
-    resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
-    hasBin: true
 
   markdown-extensions@1.1.1:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}
@@ -830,13 +819,13 @@ packages:
   property-information@6.5.0:
     resolution: {integrity: sha512-PgTgs/BlvHxOu8QuEN7wi5A0OmXaBcHpmCSTehcs6Uuu9IkDIEo13Hy7n898RHfrQ49vKCoGeWZSaAK01nwVig==}
 
-  react-dom@18.2.0:
-    resolution: {integrity: sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==}
+  react-dom@19.2.0:
+    resolution: {integrity: sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==}
     peerDependencies:
-      react: ^18.2.0
+      react: ^19.2.0
 
-  react@18.2.0:
-    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+  react@19.2.0:
+    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
     engines: {node: '>=0.10.0'}
 
   read-cache@1.0.0:
@@ -860,8 +849,8 @@ packages:
     resolution: {integrity: sha512-xal3CZX1Xlo/k4ApwCFrHVACi9fBqJ7V+mwhBsuf/1IOKbBy098Fex+Wa/5QMubw09pSZ/u8EY8PWgevJsXp1A==}
     engines: {node: '>=6'}
 
-  scheduler@0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+  scheduler@0.27.0:
+    resolution: {integrity: sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==}
 
   semver@7.7.3:
     resolution: {integrity: sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==}
@@ -1091,11 +1080,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@mdx-js/react@2.3.0(react@18.2.0)':
+  '@mdx-js/react@2.3.0(react@19.2.0)':
     dependencies:
       '@types/mdx': 2.0.13
-      '@types/react': 18.2.55
-      react: 18.2.0
+      '@types/react': 19.2.2
+      react: 19.2.0
 
   '@next/env@16.0.2-canary.3': {}
 
@@ -1211,31 +1200,25 @@ snapshots:
     dependencies:
       undici-types: 5.26.5
 
-  '@types/prop-types@15.7.15': {}
-
-  '@types/react-dom@18.2.19':
+  '@types/react-dom@19.2.2(@types/react@19.2.2)':
     dependencies:
-      '@types/react': 18.2.55
+      '@types/react': 19.2.2
 
-  '@types/react@18.2.55':
+  '@types/react@19.2.2':
     dependencies:
-      '@types/prop-types': 15.7.15
-      '@types/scheduler': 0.26.0
       csstype: 3.1.3
-
-  '@types/scheduler@0.26.0': {}
 
   '@types/unist@2.0.11': {}
 
-  '@vercel/analytics@1.5.0(next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)':
+  '@vercel/analytics@1.5.0(next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)':
     optionalDependencies:
-      next: 16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react: 18.2.0
+      next: 16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
 
-  '@vercel/speed-insights@1.2.0(next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(react@18.2.0)':
+  '@vercel/speed-insights@1.2.0(next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)':
     optionalDependencies:
-      next: 16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react: 18.2.0
+      next: 16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      react: 19.2.0
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -1312,9 +1295,9 @@ snapshots:
 
   function-bind@1.1.2: {}
 
-  geist@1.2.2(next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)):
+  geist@1.2.2(next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)):
     dependencies:
-      next: 16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      next: 16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
 
   hasown@2.0.2:
     dependencies:
@@ -1366,8 +1349,6 @@ snapshots:
   is-reference@3.0.3:
     dependencies:
       '@types/estree': 1.0.8
-
-  js-tokens@4.0.0: {}
 
   js-yaml@4.1.0:
     dependencies:
@@ -1425,10 +1406,6 @@ snapshots:
       lightningcss-win32-x64-msvc: 1.30.2
 
   longest-streak@3.1.0: {}
-
-  loose-envify@1.4.0:
-    dependencies:
-      js-tokens: 4.0.0
 
   markdown-extensions@1.1.1: {}
 
@@ -1745,26 +1722,26 @@ snapshots:
 
   nanoid@3.3.11: {}
 
-  next-mdx-remote@4.4.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next-mdx-remote@4.4.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@mdx-js/mdx': 2.3.0
-      '@mdx-js/react': 2.3.0(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
+      '@mdx-js/react': 2.3.0(react@19.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
       vfile: 5.3.7
       vfile-matter: 3.0.1
     transitivePeerDependencies:
       - supports-color
 
-  next@16.0.2-canary.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  next@16.0.2-canary.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@next/env': 16.0.2-canary.3
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001752
       postcss: 8.4.31
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      styled-jsx: 5.1.6(react@18.2.0)
+      react: 19.2.0
+      react-dom: 19.2.0(react@19.2.0)
+      styled-jsx: 5.1.6(react@19.2.0)
     optionalDependencies:
       '@next/swc-darwin-arm64': 16.0.2-canary.3
       '@next/swc-darwin-x64': 16.0.2-canary.3
@@ -1824,15 +1801,12 @@ snapshots:
 
   property-information@6.5.0: {}
 
-  react-dom@18.2.0(react@18.2.0):
+  react-dom@19.2.0(react@19.2.0):
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.2.0
-      scheduler: 0.23.2
+      react: 19.2.0
+      scheduler: 0.27.0
 
-  react@18.2.0:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.2.0: {}
 
   read-cache@1.0.0:
     dependencies:
@@ -1870,9 +1844,7 @@ snapshots:
     dependencies:
       mri: 1.2.0
 
-  scheduler@0.23.2:
-    dependencies:
-      loose-envify: 1.4.0
+  scheduler@0.27.0: {}
 
   semver@7.7.3:
     optional: true
@@ -1922,10 +1894,10 @@ snapshots:
     dependencies:
       inline-style-parser: 0.1.1
 
-  styled-jsx@5.1.6(react@18.2.0):
+  styled-jsx@5.1.6(react@19.2.0):
     dependencies:
       client-only: 0.0.1
-      react: 18.2.0
+      react: 19.2.0
 
   sugar-high@0.6.1: {}
 

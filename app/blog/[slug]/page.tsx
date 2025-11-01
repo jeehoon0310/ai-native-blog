@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
-import { formatDate, getBlogPosts } from 'app/blog/utils'
+import { formatDate, getBlogPosts, DEFAULT_AUTHOR } from 'app/blog/utils'
 import { baseUrl } from 'app/sitemap'
+import { AuthorProfile } from 'app/components/author-profile'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -11,8 +12,9 @@ export async function generateStaticParams() {
   }))
 }
 
-export function generateMetadata({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params
+  let post = getBlogPosts().find((post) => post.slug === resolvedParams.slug)
   if (!post) {
     return
   }
@@ -51,12 +53,16 @@ export function generateMetadata({ params }) {
   }
 }
 
-export default function Blog({ params }) {
-  let post = getBlogPosts().find((post) => post.slug === params.slug)
+export default async function Blog({ params }) {
+  const resolvedParams = await params
+  let post = getBlogPosts().find((post) => post.slug === resolvedParams.slug)
 
   if (!post) {
     notFound()
   }
+
+  const author = post.metadata.author || DEFAULT_AUTHOR
+  const authorSlug = author.name.toLowerCase().replace(/\s+/g, '-')
 
   return (
     <section>
@@ -77,7 +83,7 @@ export default function Blog({ params }) {
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',
-              name: 'My Portfolio',
+              name: author.name,
             },
           }),
         }}
@@ -93,6 +99,7 @@ export default function Blog({ params }) {
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
+      <AuthorProfile {...author} authorSlug={authorSlug} />
     </section>
   )
 }
